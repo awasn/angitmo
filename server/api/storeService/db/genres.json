@@ -1,0 +1,17 @@
+[
+	{ "name": "Pop" },
+	{ "name": "Rock" },
+	{ "name": "Jazz" },
+	{ "name": "Metal" },
+	{ "name": "Electronic" },
+	{ "name": "Blues" },
+	{ "name": "Latin" },
+	{ "name": "Rap" },
+	{ "name": "Classical" },
+	{ "name": "Alternative" },
+	{ "name": "Country" },
+	{ "name": "R&B" },
+	{ "name": "Indie" },
+	{ "name": "Punk" },
+	{ "name": "World" }
+]
