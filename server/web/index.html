@@ -1,15 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html id="ng-app" ng-app="angitmo" lang="pl">
 	<head>
-		<title>angitmo</title>
+		<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		
-		<link href="/stylesheets/angitmo.css" rel="stylesheet">
+		<base href="/"/>
+        <meta name="fragment" content="!">
+		
+		<title ng-bind="pageTitle"></title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/semantic.min.css">
+		<link rel="stylesheet" type="text/css" href="/stylesheets/angitmo.css">
 	</head>
 	<body>
+		<div class="ui inverted segment">
+			<nav class="ui container" role="navigation">
+				<div class="ui fluid inverted large menu">
+					<div class="header item">AngularJS Music Store</div>
+					<a class="item" data-ui-sref="app.home()">strona główna</a>
+					<a class="item" data-ui-sref="app.store.genres()">sklep</a>
+					<div class="right menu">
+						<div class="item"><i class="shop icon"></i></div>
+					</div>
+				</div>
+			</nav>			
+		</div>		
 		
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+		<main role="main">
+			<div class="ui container">
+				<div ui-view></div>
+			</div>
+		</main>
 		
-		<script type="text/javascript" src="/app/angitmo.js"></script>
+		<footer class="ui secondary inverted segment">
+			<div class="ui center aligned container">
+				<a href="https://github.com/awasn/angitmo"><h4 class="ui inverted header">angitmo</h4></a>
+			</div>
+		</footer>
+		
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>		
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/semantic.min.js"></script>
+		<script type="text/javascript" src="/javascripts/angitmo.js"></script>
 	</body>
 </html>

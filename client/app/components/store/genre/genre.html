@@ -1,0 +1,10 @@
+<div class="ui stackable grid">
+	<div class="sixteen wide column">
+		<h1 class="ui header" data-ng-bind="title"></h1>
+		<div class="ui relaxed list">
+			<div class="item" data-ng-repeat="genre in storeGenre.genres">
+				<a class="content" data-ng-bind="::genre.name"></a>
+			</div>
+		</div>
+	</div>
+</div>

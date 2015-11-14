@@ -30,11 +30,11 @@ exports.register = function (server, options, next) {
         {
             method: 'GET',
             path: '/albums/{id}',
-            handler: (request, reply) => { return reply(albums[request.params.id]); },
+            handler: (request, reply) => { return reply(albums[request.params.id - 1]); },
             config: {
                 validate: {
                     params: {
-                        id: Joi.number().integer().required().min(0).max(albums.length - 1)
+                        id: Joi.number().integer().required().min(1).max(albums.length)
                     }
                 }
             }
