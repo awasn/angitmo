@@ -122,24 +122,6 @@
                 }
                 $rootScope.pageTitle = pageTitle;
 			});
-
-			$rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
-				$log.info('stateChangeStart');
-				console.log('$stateChangeStart to ' + toState.to + '- fired when the transition begins. toState,toParams : \n', toState, toParams);
-			});
-			$rootScope.$on('$stateChangeError', function (event, toState, toParams, fromState, fromParams, error) {
-				$log.info('stateChangeError');
-				$log.error(error);
-				$log.error(JSON.stringify(error));
-				console.log('$stateChangeError - fired when an error occurs during transition.');
-				console.log(arguments);
-			});
-			$rootScope.$on('$stateNotFound', function (event, unfoundState, fromState, fromParams) {
-				$log.info('stateNotFound');
-				console.log('$stateNotFound ' + unfoundState.to + '  - fired when a state cannot be found by its name.');
-				console.log(unfoundState, fromState, fromParams);
-			});
-
 		});
 })();	
 (function () {
